@@ -1,129 +1,14 @@
-name: MineQuest
-main: com.theminequest.MineQuest.MineQuest
+name: MineQuest-HeroChat
+main: com.theminequest.MineQuest.MineQuest-HeroChat
 version: ${build.version}
 
-author: JMonk
-authors: [Echobob, Xu_R, phrstbrn, Ltan, Makraiz, Blaksmith]
+author: Echobob
+authors: [Xu_R, phrstbrn, Ltan, Makraiz, Blaksmith]
 
 description: This plugin, and its add-ons expands Minecraft to add in Npcs, Quests, and custom events to create a Role-Play enviorment in Minecraft
 website: www.theminequest.com
 
 load: POSTWORLD
-loadbefore: [MineQuest-NPC, MineQuest-RPG, MineQuest-Events, MineQuest-Abilities, MineQuest-Spout]
 
+depend: [MineQuest]
 softdepend: [Vault]
-
-commands:
-  minequest:
-    description: View MineQuest commands.
-  quest:
-    description: View Quest commands.
-    aliases: [mqquest,mquest]
-  party:
-    description: View Party commands.
-    aliases: [mqparty,questparty]
-    
-permissions:
-  minequest.*:
-    description: Allows all MineQuest-Core permissions.
-    default: false
-    children:
-      minequest.command.*: true
-      minequest.sign.placesign: true
-      minequest.sign.takequest: true
-  minequest.command.*:
-    description: Allows access to all MineQuest-Core commands.
-    default: false
-    children:
-      minequest.command.party.*: true
-      minequest.command.quest.*: true
-  minequest.command.party.*:
-    description: Allows access to all MineQuest-Core party commands.
-    default: false
-    children:
-      minequest.command.party.accept: true
-      minequest.command.party.create: true
-      minequest.command.party.invite: true
-      minequest.command.party.kick: true
-      minequest.command.party.leave: true
-      minequest.command.party.list: true
-      minequest.command.party.promote: true
-      minequest.command.party.help: true
-  minequest.command.quest.*:
-    description: Allows access to all MineQuest-Core quest commands.
-    default: false
-    children:
-      minequest.command.quest.given: true
-      minequest.command.quest.main: true
-      minequest.command.quest.drop: true
-      minequest.command.quest.abandon: true
-      minequest.command.quest.active: true
-      minequest.command.quest.enter: true
-      minequest.command.quest.exit: true
-      minequest.command.quest.info: true
-      minequest.command.quest.reload: true
-      minequest.command.quest.start: true
-      minequest.command.quest.help: true
-  minequest.sign.placesign:
-    description: Allows you to place a quest sign
-    default: op
-  minequest.sign.takequest:
-    description: Allows you to take a quest from a sign
-    default: true
-  minequest.command.party.accept:
-    description: Accepts party request
-    default: true
-  minequest.command.party.create:
-    description: Creates a new party
-    default: true
-  minequest.command.party.invite:
-    description: Sends a party invite
-    default: true
-  minequest.command.party.kick:
-    description: Kicks member from your party
-    default: true
-  minequest.command.party.leave:
-    description: Leaves your current party
-    default: true
-  minequest.command.party.list:
-    description: List members in your current party
-    default: true
-  minequest.command.party.promote:
-    description: Promotes member to party leader
-    default: true
-  minequest.command.party.help:
-    description: Displays party help
-    default: true
-  minequest.command.quest.given:
-    description: Shows your given quests
-    default: true
-  minequest.command.quest.main:
-    description: Starts a mainworld quest
-    default: true
-  minequest.command.quest.drop:
-    description: Drops a quest
-    default: true
-  minequest.command.quest.abandon:
-    description: Abandons your current quest
-    default: true
-  minequest.command.quest.active:
-    description: Sets instanced quest to active
-    default: true
-  minequest.command.quest.enter:
-    description: Enters the quest instance
-    default: true
-  minequest.command.quest.exit:
-    description: Exists the quest instance
-    default: true
-  minequest.command.quest.info:
-    description: Shows quest info
-    default: true
-  minequest.command.quest.reload:
-    description: Reloads quest from disk
-    default: op
-  minequest.command.quest.start:
-    description: Starts your active quest
-    default: true
-  minequest.command.quest.help:
-    description: Shows quest help
-    default: true
