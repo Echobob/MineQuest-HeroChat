@@ -1,5 +1,5 @@
 name: MineQuest-HeroChat
-main: com.theminequest.MineQuest.MineQuest-HeroChat
+main: com.theminequest.MineQuest.MQHeroChat
 version: ${build.version}
 
 author: Echobob
@@ -10,5 +10,5 @@ website: www.theminequest.com
 
 load: POSTWORLD
 
-depend: [MineQuest]
+depend: [MineQuest, HeroChat]
 softdepend: [Vault]
