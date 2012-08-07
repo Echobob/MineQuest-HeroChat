@@ -8,6 +8,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.theminequest.MineQuest.API.Managers;
+import com.dthielke.herochat.*;
 
 public class MQHeroChat {
 

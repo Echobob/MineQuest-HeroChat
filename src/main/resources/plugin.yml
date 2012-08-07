@@ -1,5 +1,5 @@
 name: MineQuest-HeroChat
-main: com.theminequest.MineQuest.MQHeroChat
+main: me.mineQuest.MQHeroChat
 version: ${build.version}
 
 author: Echobob
