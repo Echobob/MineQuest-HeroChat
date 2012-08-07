@@ -7,11 +7,14 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.theminequest.MineQuest.API.Managers;
+import com.theminequest.MineQuest.API.*;
 import com.dthielke.herochat.*;
 
-public class MQHeroChat {
+public class MQHeroChat extends JavaPlugin{
 
+	
+	public static MQHeroChat activePlugin = null;
+	
 	@Override
 	public void onEnable() {
 		if (getServer().getPluginManager().getPlugin("MineQuest") == null) {
@@ -24,6 +27,7 @@ public class MQHeroChat {
 			setEnabled(false);
 			return;
 		}
+		
 		if (getServer().getPluginManager().getPlugin("Herochat") == null) {
 			getServer().getLogger().severe("============= MineQuest-HeroChat =============");
 			getServer().getLogger().severe("HeroChat is required for MQHeroChat to operate!");
